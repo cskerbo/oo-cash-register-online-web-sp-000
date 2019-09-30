@@ -19,6 +19,6 @@ class CashRegister
   end
 
   def apply_discount
-    puts @discount.to_f
+    puts @discount
   end
 end
