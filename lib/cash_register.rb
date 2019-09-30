@@ -10,7 +10,7 @@ class CashRegister
   def add_item(title, price, quantity = nil)
     @title = title
     @price = price
-    @quantity = quantity
+    @quantity.to_f = quantity
     @total += @price * @quantity
   end
 end
