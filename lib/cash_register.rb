@@ -19,7 +19,7 @@ class CashRegister
   end
 
   def apply_discount
-    puts @total.to_f * @discount.to_f
+    puts @discount.to_f / @total.to_f * 100.00
   end
 
 end
