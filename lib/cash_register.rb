@@ -6,7 +6,7 @@ class CashRegister
     @total = 0
     @discount = discount
   end
-
+puts @total
   def add_item(title, price, quantity = 0)
     @title = title
     @price = price
@@ -17,7 +17,7 @@ class CashRegister
       @total += @price * @quantity
     end
   end
-
+puts @total
   def apply_discount
     puts @total
   end
