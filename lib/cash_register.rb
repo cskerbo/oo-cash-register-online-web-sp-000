@@ -18,7 +18,7 @@ class CashRegister
     else
       @total += @price * @quantity
     end
-    @@item_list.fill(self.title, @@item_list.size, self.quantity)
+    @@item_list.concat([self.title]*self.quantity)
   end
 
   def apply_discount
