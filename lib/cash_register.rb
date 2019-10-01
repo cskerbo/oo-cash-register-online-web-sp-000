@@ -17,7 +17,7 @@ class CashRegister
     else
       @total += @price * @quantity
     end
-    @@item_list << self
+    @@item_list << self.title
   end
 
   def apply_discount
