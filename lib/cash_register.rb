@@ -13,7 +13,7 @@ class CashRegister
     @title = title
     @price = price
     @quantity = quantity
-    @@item_list << [@title]*@quantity
+    @@item_list.concat()[@title]*@quantity)
     if @quantity == 1
       @total += @price
     else
