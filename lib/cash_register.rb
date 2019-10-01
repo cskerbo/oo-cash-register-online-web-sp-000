@@ -13,13 +13,14 @@ class CashRegister
     @title = title
     @price = price
     @quantity = quantity
+    @last_transaction = self.total
     @@item_list.concat([@title]*@quantity)
     if @quantity == 1
       @total += @price
     else
       @total += @price * @quantity
     end
-    @last_transaction = self.total
+
   end
 
   def apply_discount
@@ -37,7 +38,7 @@ class CashRegister
   end
 
   def void_last_transaction
-    @total = self.total - @last_transaction
+    puts @last_transaction
   end
 
 end
