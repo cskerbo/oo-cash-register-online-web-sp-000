@@ -6,18 +6,20 @@ class CashRegister
   def initialize(discount = 0)
     @total = 0
     @discount = discount
+    @@item_list.clear
+    end
   end
 
   def add_item(title, price, quantity = 0)
     @title = title
     @price = price
     @quantity = quantity
+    @@item_list.concat([self.title]*self.quantity)
     if @quantity == 0
       @total += @price
     else
       @total += @price * @quantity
     end
-    @@item_list.concat([self.title]*self.quantity)
   end
 
   def apply_discount
