@@ -37,7 +37,7 @@ class CashRegister
   end
 
   def void_last_transaction
-    puts last_transaction
+    puts @last_transaction
   end
 
 end
