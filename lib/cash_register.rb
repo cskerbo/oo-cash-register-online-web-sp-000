@@ -13,7 +13,7 @@ class CashRegister
     @title = title
     @price = price
     @quantity = quantity
-    @@item_list.concat([self.title]*self.quantity)
+    @@item_list.concat([@title]*@quantity)
     if @quantity == 0
       @total += @price
     else
